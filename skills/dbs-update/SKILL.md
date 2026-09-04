@@ -18,10 +18,10 @@ description: 更新官方 dbskill，并保留其他 Skill 与用户存档。用�
 
 ## 执行步骤
 
-1. 运行以下命令，同步官方 dbskill 的全部正式 Skill 到已支持的 Agent：
+1. 运行以下命令，安全同步并变基官方 dbskill：
 
    ```bash
-   npx -y skills add dontbesilent2025/dbskill -g --all
+   python3 scripts/manage_external_repo.py sync dbskill
    ```
 
 2. 命令成功后记录本次更新时间，避免当前对话仍加载旧 Skill 时重复提醒：

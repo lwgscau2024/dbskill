@@ -39,7 +39,11 @@ description: 更新官方 dbskill，并保留其他 Skill 与用户存档。用�
    npx -y skills add dontbesilent2025/dbskill -g --all
    ```
 
-   两种渠道都检测不到时，按这个命令更新。
+   两种渠道都检测不到时（例如 lei 工作区借放克隆 `dbskill/` 的维护形态），跳过上面的渠道安装命令，改用工作区管理脚本安全同步并变基官方 dbskill：
+
+   ```bash
+   python3 scripts/manage_external_repo.py sync dbskill
+   ```
 
 4. 清理已下线的官方旧入口。名单与官方历史版本指纹在本 Skill 的 [references/retired-skills.json](references/retired-skills.json)：
 
